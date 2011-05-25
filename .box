@@ -1,21 +1,21 @@
 ################################################
 ## GENERAL SETTINGS
 ################################################
-shared_writable_dirs:
-    - /app/cache
-    - /app/logs
+# shared_writable_dirs:
+#     - /app/cache
+#     - /app/logs
 
 ################################################
 ## WEB SPECIFIC SETTINGS
 ################################################
-document_root: /web
-default_gateway: app.php
-index_list: [app.php]
+# document_root: /web
+# default_gateway: app.php
+# index_list: [app.php]
 
 ################################################
 ## PHP SPECIFIC SETTINGS
 ################################################
-php_version: 5.3.5
-php_extensions: [intl]
-php_short_open_tag: Off
-magic_quotes_gpc: Off
+# php_version: 5.3.5
+# php_extensions: [intl]
+# php_short_open_tag: Off
+# magic_quotes_gpc: Off
