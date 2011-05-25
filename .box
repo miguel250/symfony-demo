@@ -8,21 +8,14 @@ shared_writable_dirs:
 ################################################
 ## WEB SPECIFIC SETTINGS
 ################################################
-# document_root: web
-default_gateway: app
-# index_list: [app.php]
+document_root: web
+default_gateway: app_dev.php
+index_list: [app.php]
 
 ################################################
 ## PHP SPECIFIC SETTINGS
 ################################################
 # php_version: 5.3.5
-php_extensions: [intl, mbstring, xsl, apc, mysql]
+php_extensions: [intl, mbstring, xsl, apc, mysql, posix, iconv, tokenizer, xml, pdo_mysql]
 php_short_open_tag: Off
 magic_quotes_gpc: Off
-
-# php_extensions : 
-#     - intl
-#     - xsl
-#     - apc
-#     - mysql
-#     - mbstring
