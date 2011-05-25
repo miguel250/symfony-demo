@@ -15,7 +15,14 @@ shared_writable_dirs:
 ################################################
 ## PHP SPECIFIC SETTINGS
 ################################################
-php_version: 5.3.5
-php_extensions: [intl,mbstring,xsl,apc,mysql]
+# php_version: 5.3.5
+# php_extensions: [intl,mbstring,xsl,apc,mysql]
 php_short_open_tag: Off
 magic_quotes_gpc: Off
+
+php_extensions : 
+    - intl
+    - xsl
+    - apc
+    - mysql
+    - mbstring
