@@ -1,0 +1,8 @@
+shared_writable_dirs:
+    - /app/cache
+    - /app/logs
+
+php_version: 5.3.5
+php_extensions: [intl]
+php_short_open_tag: Off
+magic_quotes_gpc: Off
