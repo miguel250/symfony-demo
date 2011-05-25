@@ -2,8 +2,8 @@
 ## GENERAL SETTINGS
 ################################################
 shared_writable_dirs:
-    - cache
-    - logs
+    - app/cache
+    - app/logs
 
 ################################################
 ## WEB SPECIFIC SETTINGS
