@@ -9,8 +9,8 @@ shared_writable_dirs:
 ## WEB SPECIFIC SETTINGS
 ################################################
 document_root: web
-default_gateway: app.php
-index_list: [app.php]
+default_gateway: app_dev.php
+index_list: [app_dev.php]
 
 ################################################
 ## PHP SPECIFIC SETTINGS
