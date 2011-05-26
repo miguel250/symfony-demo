@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <title>Pagoda Message App</title>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/layout.css') }}" media="all" />
+        <script type="text/javascript" src="http://use.typekit.com/hai1jyh.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content">
+
+                <form name="messagebox" action="{{ path('homepage') }}" method="post"  {{ form_enctype(form) }} ">
+                      <div class="border">
+                        {{ form_errors(form) }}
+                        {{ form_errors(form) }}
+                        {% form_theme form 'PagodaboxSpeakBundle:Form:fields.html.twig' %}
+                        {{ form_widget(form.message) }}
+                        {{ form_rest(form) }}
+                    </div>
+
+                    <input class="btn" type="image" value="" src="{{ asset('images/btn.png') }}" border="0" name="btn">
+                        {% set cssClass = {"0": "yellow","1":"orange"} %}
+
+                        <div class="message-box">
+                            {% set count = 0 %}
+                            {% for messages in messages%}
+
+                            <div class='message {{ cssClass[count] }}'>
+                                {{messages.message}}
+                                <span class='bottom'></span>
+                            </div>
+                            {% if count == 1%}
+                            {% set count = 0 %}
+                            {% elseif count ==  0 %}
+                            {% set count = 1 %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                </form>
+            </div>
+    </body>
+</html>
