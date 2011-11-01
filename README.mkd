@@ -8,17 +8,16 @@ You have 2 choices while setting up symfony 2 on pagoda adding the database info
 
 
 you need will need to change the following file in your symfony application `app/config/parameters.ini` and `app/config/config.yml`
-If you decide not to use external parameters replace ` %database.name%`, `%database.user%`, ` %database.password%` and `%database.socket%` in 'app/config/parameters.ini'  with the database infomation
+If you decide not to use external parameters replace `%database.host%`, `%database.name%`, `%database.user%` and  ` %database.password%` in 'app/config/parameters.ini'  with the database infomation
 
 ``` ini
  ;app/config/parameters.ini
             [parameters]
              database_driver   = pdo_mysql
-             database_host     = localhost
+             database_host     = %database.host%
              database_name     = %database.name%
              database_user     = %database.user%
              database_password = %database.password%
-             database_socket= %database.socket%
 ```
 
 ``` yml
@@ -26,18 +25,16 @@ If you decide not to use external parameters replace ` %database.name%`, `%datab
          dbname:   %database_name%
          user:     %database_user%
          password: %database_password%
-         unix_socket: %database_socket%
 ```
 After changing the files push your application to github then go to pagodabox.com and create an application with a [database](http://guides.pagodabox.com/database/creating-a-database)
 
 (External Parameters) Go to you application global vars in the pagodabox dash board and add the following variables using your database infomation
 
 ``` ini
-
+         SYMFONY__DATABASE__HOST
          SYMFONY__DATABASE__NAME
          SYMFONY__DATABASE__USER
          SYMFONY__DATABASE__PASSWORD
-         SYMFONY__DATABASE__SOCKET
 
 ```
 After you have do this you will need to create a [tunnel](http://guides.pagodabox.com/database/creating-database-tunnel) to connect to your database

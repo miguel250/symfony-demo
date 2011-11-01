@@ -1,21 +1,23 @@
-################################################
-## GENERAL SETTINGS
-################################################
-shared_writable_dirs:
+web1: #component type & number
+  name: Listening Universe            #component settings
+  shared_writable_dirs:
     - app/cache
     - app/logs
-
-################################################
-## WEB SPECIFIC SETTINGS
-################################################
-document_root: web
-default_gateway: app.php
-index_list: [app.php]
-
-################################################
-## PHP SPECIFIC SETTINGS
-################################################
-# php_version: 5.3.5
-php_extensions: [intl, mbstring, xsl, apc, mysql, posix, iconv, tokenizer, xml, pdo_mysql]
-php_short_open_tag: Off
-magic_quotes_gpc: Off
+  document_root: web
+  php_version: 5.3.8
+  php_extensions:
+    - intl
+    - mbstring
+    - xsl
+    - apc 
+    - mysql 
+    - posix 
+    - iconv 
+    - tokenizer
+    - xml
+    - pdo_mysql
+  php_short_open_tag: Off
+  magic_quotes_gpc: Off
+db1: #component type & number 
+  name: Universe            #component settings
+  type: mysql
