@@ -3,6 +3,7 @@
 namespace Pagodabox\SpeakBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Pagodabox\SpeakBundle\Entity\Content;
 use Pagodabox\SpeakBundle\Form\MessageType;
@@ -26,7 +27,9 @@ class MainController extends Controller
 
                 $em->persist($content);
                 $em->flush();
-
+                
+                $url = $this->get('router')->generate('homepage');
+                return new RedirectResponse($url);
             }
         }
 

@@ -14,9 +14,7 @@
                 <form name="messagebox" action="{{ path('homepage') }}" method="post"  {{ form_enctype(form) }} ">
                       <div class="border">
                         {{ form_errors(form) }}
-                        {{ form_errors(form) }}
-                        {% form_theme form 'PagodaboxSpeakBundle:Form:fields.html.twig' %}
-                        {{ form_widget(form.message) }}
+                        {{ form_widget(form.message, { 'attr': {'class':'textarea'} }) }}
                         {{ form_rest(form) }}
                     </div>
 

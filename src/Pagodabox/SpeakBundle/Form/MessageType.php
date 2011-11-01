@@ -18,4 +18,9 @@ class MessageType extends AbstractType
             'data_class' => 'Pagodabox\SpeakBundle\Entity\Content',
         );
     }
+    
+    public function getName()
+    {
+    	return 'Message';
+    }
 }
