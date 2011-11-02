@@ -41,6 +41,4 @@ After you have do this you will need to create a [tunnel](http://guides.pagodabo
 
 if  you are using external parameters you will need to change` app/config/parameters.ini` to your database infomation(dont push changes to github)
 
-and remove `unix_socket: %database_socket%`  from `app/config/config.yml`  also remove `database_socket= %database.socket%` from `app/config/parameters.ini`
-
 Now you can run `php app/console doctrine:schema:create` to create the database schema. If you want you can reverst the `app/config/config.yml` and `app/config/parameters.ini` to match the one on github
